@@ -11,11 +11,6 @@ disabledValue=true;
   data: any[] = [];
   constructor(private services: ServiceService) { }
 
-  
-  // ngOnChanges(){
-  //   console.log("clicked on changes")
-  // }
-
   ngOnInit() {
     this.pricingData();
   }
@@ -26,10 +21,7 @@ disabledValue=true;
 
         this.data.forEach((list) =>{
               list['disabled'] = true;
-        });
-      
-        console.log("data printing ............",this.data);
-       
+        });       
       } else {
         console.log("error");
       }
@@ -38,9 +30,6 @@ disabledValue=true;
   }
 
   disableEnable(value){
-    // this.ngOnChanges();
-    // debugger;
-    console.log(value,"hdsjfsdhgf")
     if(value.disabled === true){
       value.disabled=false;
     }else{ value.disabled=true};
@@ -57,25 +46,19 @@ disabledValue=true;
     };
     propertyDefineArray['disabled']=false;
     const lengthOfArray = this.data.length;
-    // console.log(this.pricing.length,"......length");
     propertyDefineArray.id = lengthOfArray + 1;
-    console.log(propertyDefineArray.id)
-    console.log(propertyDefineArray, ".......property defining")
     this.data.push(propertyDefineArray);
-    console.log(this.data, "....pricing")
   }
 
 
   newArrayAfterDelete = [];
 
   clickedSubTract(list, i) {
-    console.log("i======================================", list);
     this.data.forEach((element, index) => {
       if (list.id === element.id) {
         this.data.splice(index, 1);
       }
     });
-    console.log(this.data, "....pricing")
   }
 }
 
