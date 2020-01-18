@@ -10,7 +10,7 @@ How it Works :
   
   4. you can add row, delete row, update row, in pricing table.  
   
-  5. also you can sort the row by alphabetically, low to high, and high to low with the click table header.
+  5. also you can sort the column by alphabetically, low to high, and high to low with the click table header.
   
 
   
