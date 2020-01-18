@@ -1,0 +1,88 @@
+// @import "../../../assets/style/scss/variable.scss";
+
+.login {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent linear-gradient(179deg, #ffffff05 0%, #fc9220 100%) 0% 0% no-repeat padding-box;
+  background-image: url('../../../assets/images/background-waves.jpg');
+
+  &__form {
+    width: 320px;
+    height: auto;
+    box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.26);
+    background: #fff;
+    margin: auto;
+    padding: 54px 25px;
+    border-radius: 4px;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+
+    img {
+      width: 240px;
+    }
+  }
+
+}
+
+.company-icon {
+  width: 100px !important;
+  height: 150px;
+}
+
+.tab-custom {
+  margin-bottom: 20px;
+  border: 0px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  color: #000;
+  border-bottom: 1px solid #ccc !important;
+  outline: none;
+  box-shadow: none;
+
+  &:hover {
+    border: 0px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    background: #f9aa33;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid #f9aa33 !important;
+  }
+}
+
+.tab-active {
+  border: 0px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+  background: #f9aa33;
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #f9aa33 !important;
+}
+
+
+.custon-btn{
+    border: 0px;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 500;
+    background: #f9aa33;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+    &:hover{
+      background: #ffb229;
+    }
+}

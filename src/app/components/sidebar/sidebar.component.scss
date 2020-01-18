@@ -1,0 +1,26 @@
+@import '../../../assets/style/scss/variable.scss';
+
+
+.list-group-container {
+    background-color: #344955 !important;
+    border-color: #344955 !important;
+  &:hover {
+    background-color:#f9aa33 !important;
+  }
+  &:focus {
+    background-color:#f9aa33 !important;
+  }
+  &_active {
+    background-color:#f9aa33 !important;
+  }
+}
+
+
+.sidebar-color{
+    background-color: #344955 !important;
+    border-color: #344955 !important;
+}
+
+.active{
+  background-color:#f9aa33 !important;
+}

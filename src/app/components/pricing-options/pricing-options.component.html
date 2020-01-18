@@ -1,0 +1,218 @@
+<!-- <div class="card">
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        <span class="table-add float-right mb-3 mr-2">
+          <a class="text-success" (click)="add()">
+            <mdb-icon fas icon="plus" size="2x"></mdb-icon>
+          </a>
+        </span>
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            <th class="text-center">Person Name</th>
+            <th class="text-center">Age</th>
+            <th class="text-center">Company Name</th>
+            <th class="text-center">Country</th>
+            <th class="text-center">City</th>
+            <th class="text-center">Sort</th>
+            <th class="text-center">Remove</th>
+          </tr>
+          <tr *ngFor="let person of personList; let id = index">
+            <td>
+              <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{person.name}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)">{{person.age}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'companyName', $event)" (blur)="updateList(id, 'companyName', $event)">{{person.companyName}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'country', $event)" (blur)="updateList(id, 'country', $event)">{{person.country}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(id, 'city', $event)" (blur)="updateList(id, 'city', $event)">{{person.city}}</span>
+            </td>
+            <td>
+              <span class="table-up">
+                <a class="indigo-text">
+                  <mdb-icon fas icon="long-arrow-alt-up"></mdb-icon>
+                </a>
+              </span>
+              <span class="table-down">
+                <a class="indigo-text">
+                  <mdb-icon fas icon="long-arrow-alt-down"></mdb-icon>
+                </a>
+              </span>
+            </td>
+            <td>
+              <span class="table-remove">
+                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(id)">Remove</button>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  Editable table -->
+
+
+<!-- <div style="border-bottom: 1px solid #ccc; width: 200px; height: 27px;">
+  <div style="background-color: #ccc; border-radius: 20px; display: flex; align-items: center;">
+   <div class="ft-12">html</div>
+   <div>
+     x
+   </div>
+  </div>
+  <input type="text"  style="width: 10rem; border: none; display: flex; align-items: center; outline: none;" placeholder="text" 
+  (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed"/>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+        You can collapse this card by clicking Toggle
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <select multiple class="form-control">
+  <option></option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+-->
+
+<div class="w-100 h-100">
+  <div class="d-flex align-items-center pricing-card-header">
+    <img src="../../../assets/images/dollar-symbol.png" width="15" height="15" />
+    <div class="ft-14 fw-500 ml-2 text-capitalize">selet pricing option </div>
+  </div>
+  <div class="pricing-card-body">
+    <div class="p-2">
+
+
+
+
+
+      <table class="table table-bordered" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="8">
+        <thead class="thead-dark">
+          <tr>
+
+            <th (click)="addingValue()" class="ft-12 cursor-pointer">
+              <div style="width: 55px;" ngbTooltip="click to add new row in table" tooltipClass="custom-class"
+                placement="top">
+                <img width="16" height="16" src="../../../assets/images/add.png" />
+                <span class="pl-2">Add</span>
+              </div>
+            </th>
+            <th style="width: 20%">
+              <mfDefaultSorter by="name">Name</mfDefaultSorter>
+            </th>
+            <th style="width: 20%">
+              <mfDefaultSorter by="saving">Saving</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+              <mfDefaultSorter by="residuals">Residuals</mfDefaultSorter>
+            </th>
+            <th style="width: 20%">
+              <mfDefaultSorter by="rate">Rate</mfDefaultSorter>
+            </th>
+            <th style="padding: 0 30px;"></th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="ft-14 table-list cursor-pointer" [ngClass]="[!list.disabled ? 'table-select' : '']"
+            *ngFor="let list of mf.data; index as i">
+            <td style="width: 70px; text-align: center;">
+              <img (click)="disableEnable(list)" *ngIf="list.disabled" class="cursor-pointer"
+                src="../../../assets/images/edit.png" width="16" height="16" ngbTooltip="click to edit"
+                tooltipClass="custom-class" placement="top" />
+              <img *ngIf="!list.disabled" (click)="disableEnable(list)" class="cursor-pointer"
+                src="../../../assets/images/check.png" width="18" height="18" ngbTooltip="click to save"
+                tooltipClass="custom-class" placement="top" />
+              <!-- <span class="pl-3">{{i+1}}</span> -->
+            </td>
+            <td><input class="custom-input" placeholder="enter details" style="width: 200px;"
+                [ngClass]="[!list.disabled ? 'edit-input' : '']" disabled={{list.disabled}} [(ngModel)]="list.name" />
+            </td>
+            <td><input class="custom-input" placeholder="enter saving" style="width: 70px;"
+                [ngClass]="[!list.disabled ? 'edit-input' : '']" disabled={{list.disabled}} [(ngModel)]="list.saving" />
+            </td>
+            <td><input class="custom-input" placeholder="enter residuals" style="width: 70px;"
+                [ngClass]="[!list.disabled ? 'edit-input' : '']" disabled={{list.disabled}}
+                [(ngModel)]="list.residuals" /></td>
+            <td><input class="custom-input" placeholder="enter rate" style="width: 50px;"
+                [ngClass]="[!list.disabled ? 'edit-input' : '']" disabled={{list.disabled}} [(ngModel)]="list.rate" />
+            </td>
+            <td class="text-center"><img (click)="clickedSubTract(list,i)" width="14" height="14"
+                src="../../../assets/images/rubbish.png" /></td>
+
+          </tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">
+              <mfBootstrapPaginator></mfBootstrapPaginator>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <!-- 
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" class="ft-14">Name</th>
+                        <th scope="col" class="ft-14">Saving</th>
+                        <th scope="col" class="ft-14">Residuals</th>
+                        <th scope="col" class="ft-14">Rate</th>
+                        <th (click)="addingValue()" class="ft-12 cursor-pointer">
+                            <img width="14" height="14" src="../../../assets/images/plus.png" />
+                            Add</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="ft-14 table-list" *ngFor="let list of pricing; index as i">
+                        <td><input class="custom-input" ngModel="{{list.name}}" /></td>
+                        <td><input class="custom-input" ngModel="{{list.saving}}" /></td>
+                        <td><input class="custom-input" ngModel="{{list.residuals}}" /></td>
+                        <td><input class="custom-input" ngModel="{{list.rate}}" /></td>
+                        <td class="text-center"><img (click)="clickedSubTract(list,i)" width="14" height="14"
+                                src="../../../assets/images/rubbish.png" /></td>
+
+                    </tr>
+                </tbody>
+            </table> -->
+      <div class="d-flex text-capitalize">
+        <div class="ft-14 fw-500 mr-2">non-monthly fees</div>
+        <button class="btn btn-primary custom-btn ft-12">Add</button>
+      </div>
+    </div>
+    <div class="detail-header p-2">
+      Final Proposal Details Below
+    </div>
+    <div class="d-flex align-items-center text-capitalize p-2">
+      <div class="ft-14 fw-500 mr-2">Proposal</div>
+      <button class="btn btn-primary custom-btn ft-12">Update</button>
+      <img src="../../../assets/images/help-web-button.png" width="10" height="10" class="mx-2" />
+    </div>
+    <div class="pb-1">
+      <table class="table proposal-table text-center">
+        <tr class="ft-14">
+          <td>Generated</td>
+          <td>3/09/2016</td>
+          <td>Pricing</td>
+          <td>6 Tiered w/Reg Debit</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

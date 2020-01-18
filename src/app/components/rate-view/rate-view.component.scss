@@ -1,0 +1,15 @@
+@import "../../../assets/style/scss/variable.scss";
+
+.rate-card-header{
+    background: #f9aa33;
+    border-radius: 5px 5px 0px 0px;
+    padding: 8px 15px;
+    color: #fff;
+}
+
+.rate-card-body{
+    background: #fff;
+    padding: 0 15px;
+    height: calc(100% - 37px);
+    overflow: auto;
+}

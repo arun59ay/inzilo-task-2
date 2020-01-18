@@ -1,0 +1,135 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "url": "../../../assets/images/repair-tools.png",
+            "name": "pricing"
+        },
+        {
+            "id": 2,
+            "url": "../../../assets/images/money.png",
+            "name": "manage system"
+        },
+        {
+            "id": 3,
+            "url": "../../../assets/images/key-shape.png",
+            "name": "banks"
+        },
+        {
+            "id": 4,
+            "url": "../../../assets/images/bank.svg",
+            "name": "reports"
+        },
+        {
+            "id": 5,
+            "url": "../../../assets/images/report.svg",
+            "name": "sales agent"
+        },
+        {
+            "id": 6,
+            "url": "../../../assets/images/boss.png",
+            "name": "pipeline"
+        },
+        {
+            "id": 7,
+            "url": "../../../assets/images/employee.png",
+            "name": "pipeline"
+        },
+        {
+            "id": 8,
+            "url": "../../../assets/images/funnel.png",
+            "name": "pipeline search"
+        },
+        {
+            "id": 9,
+            "url": "../../../assets/images/loupe.png",
+            "name": "setup system"
+        }
+    ],
+    "userList":[
+            {"id": 1, "url":"../../../assets/images/view.png", "name":"alex"},
+            {"id": 2, "url":"../../../assets/images/view.png", "name":"Sirin"},
+            {"id": 3, "url":"../../../assets/images/view.png", "name":"joe"},
+            {"id": 4, "url":"../../../assets/images/view.png", "name":"marti"},
+            {"id": 5, "url":"../../../assets/images/list.png", "name":"view all recent"}
+          ],
+
+
+          "dataList":[
+                  {
+                    "id":1,
+                    "name": "interchanges + .10% & $.10",
+                    "saving":  "$1,331.33",
+                    "residuals": "$112.43",
+                    "rate": "2.9%"
+                  },
+                      {
+                    "id":2,
+                    "name": "interchanges + .15% & $.10",
+                    "saving":  "$2,331.33",
+                    "residuals": "$312.43",
+                    "rate": "3.9%"
+
+                  },
+                      {
+                    "id":3,
+                    "name": "interchanges + .20% & $.10",
+                    "saving":  "$5,331.33",
+                    "residuals": "$612.43",
+                    "rate": "2.5%"
+
+                  },
+                      {
+                    "id":4,
+                    "name": "interchanges + .30% & $.10",
+                    "saving":  "$3,331.33",
+                    "residuals": "$312.43",
+                    "rate": "2.6%"
+
+                  },
+                      {
+                    "id":5,
+                    "name": "interchanges + .55% & $.10",
+                    "saving":  "$1,531.33",
+                    "residuals": "$612.43",
+                    "rate": "3.9%"
+                  },
+                      {
+                    "id":6,
+                    "name": "interchanges + .65% & $.10",
+                    "saving":  "$1,7831.33",
+                    "residuals": "$182.43",
+                    "rate": "2.2%"
+                  },
+                      {
+                    "id":7,
+                    "name": "interchanges + .76% & $.10",
+                    "saving":  "$1,931.33",
+                    "residuals": "$182.43",
+                    "rate": "2.1%"
+                  },
+                      {
+                    "id":8,
+                    "name": "interchanges + .87% & $.10",
+                    "saving":  "$1,981.33",
+                    "residuals": "$142.43",
+                    "rate": "3.5%"
+                  },
+                      {
+                    "id":9,
+                    "name": "interchanges + .10% & $.10",
+                    "saving":  "$1,761.33",
+                    "residuals": "$452.43",
+                    "rate": "5.3%"
+                  },
+                      {
+                    "id":10,
+                    "name": "interchanges + .91% & $.10",
+                    "saving":  "$3,331.33",
+                    "residuals": "$712.43",
+                    "rate": "4.6%"
+                  }
+                ]
+        
+    
+}

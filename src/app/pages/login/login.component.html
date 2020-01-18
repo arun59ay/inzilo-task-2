@@ -1,0 +1,93 @@
+<div class="login">
+  <div class="w-50 "></div>
+  <div class="login__form">
+    <!-- <div class="login__logo">
+      <img src="../../../assets/images/inzilo_logo_blue.png" class="company-icon" />
+    </div> -->
+
+    <button class="btn tab-custom" [class.tab-active]="loginTab" (click)="onClickLoginButton()">login</button>
+    <button class="btn tab-custom" [class.tab-active]="signUpTab" (click)="onClickSignUPButton()">sign up</button>
+
+
+  <div class="" *ngIf="loginTab">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+      <div class="form-group">
+          <label>Email</label>
+          <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submittedLogin && fb.email.errors }" required/>
+          <div *ngIf="submittedLogin && fb.email.errors" class="invalid-feedback">
+              <div *ngIf="fb.email.errors.required">Email is required</div>
+              <div *ngIf="fb.email.errors.email">Email must be a valid email address</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Password</label>
+          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submittedLogin && fb.password.errors }" required/>
+          <div *ngIf="submittedLogin && fb.password.errors" class="invalid-feedback">
+              <div *ngIf="fb.password.errors.required">Password is required</div>
+              <div *ngIf="fb.password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+      </div>
+      <div>
+        <h6 *ngIf="errorCredientialFlag" class="text-danger ft-12">invalid username or password</h6>
+      </div>
+      <div class="form-group">
+          <button class="btn custon-btn">Sign In</button>
+      </div>
+  </form>
+  </div>
+  <!-- login form ended -->
+
+
+  <!-- signUp form start -->
+  <div class="" *ngIf="signUpTab">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+      <div class="form-group">
+          <label>First Name</label>
+          <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+              <div *ngIf="f.firstName.errors.required">First Name is required</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+          <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Email</label>
+          <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Password</label>
+          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+          <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+          </div>
+      </div>
+      <div>
+        <h6 *ngIf="errorMessageFlag" style="color: red;">{{errorMessage}}</h6>
+      </div>
+      <div class="form-group">
+          <button class="btn custon-btn">Register</button>
+      </div>
+  </form>
+  </div> 
+
+
+
+  </div>
+</div>

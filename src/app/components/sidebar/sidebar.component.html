@@ -1,0 +1,45 @@
+<div class="p-2">
+    <div class="card p-2 my-2">
+        <div>
+            <div class="card m-0 sidebar-color">
+                <div class="d-flex">
+                    <div class="p-2">
+                        <img src="../../../assets/images/profile images.png" width="100" height="100" />
+                    </div>
+                    <div class="p-2 text-white mt-4 w-100">
+                        <div class="ft-16">WELCOME</div>
+                        <div class="ft-14 text-capitalize">{{responseFormData?.firstName}} {{responseFormData?.lastName}}</div>
+                        <div class="d-flex ft-12">
+                            <div class="text-secondary">edit profile </div>
+                            &nbsp;
+                            <div class="text-secondary">|</div>
+                            &nbsp;
+                            <div class="text-secondary cursor-pointer" (click)="signOut()" routerLinkActive="router-link-active" >sign out</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100">
+        <button class="w-100 btn btn-primary sidebar-color ft-14">Add to Pipeline</button>
+    </div>
+    <div class="card my-2 p-0 bg-secondary">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item cursor-pointer list-group-container text-white ft-12 d-flex text-capitalize" 
+             *ngFor="let list of setup, let i = index" [ngClass]="{'active': activeClass}" >
+                <img [src]='list.url' width="16" height="16"/>
+                <div class="ml-4">{{list.name}}</div>
+            </li>
+        </ul>
+    </div>
+    <div class="text-capitalize ft-14 text-center w-100 font-weight-bold" >recently view</div>
+    <div class="card my-2 p-0 bg-secondary">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item cursor-pointer list-group-container text-white ft-12 d-flex text-capitalize" *ngFor="let list of userlist">
+                <img [src]='list.url' width="16" height="16"/>
+                <div class="ml-4">{{list.name}}</div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,86 @@
+@import "../../../assets/style/scss/variable.scss";
+
+.pricing-card-header {
+  background: #f9aa33;
+  border-radius: 5px 5px 0px 0px;
+  padding: 8px 15px;
+  color: #fff;
+}
+
+.pricing-card-body {
+  background: #fff;
+  padding: 0 15px;
+}
+
+
+.table-list{
+    cursor: pointer;
+    &:hover{
+        background-color: #f9aa33;
+        color: #fff;
+    }
+    &:active{
+        background-color: #f9aa33;
+        color: #fff;
+    }
+    &:focus{
+        background-color: #f9aa33;
+        color: #fff;
+    }
+}
+
+.detail-header{
+    border: 1px solid #ccc;
+    background: #ccc;
+    text-align: center;
+}
+
+.proposal-table {
+  td{
+      border: 1px solid #ccc;
+      &:nth-child(odd){
+          background: #ccc;
+      }
+  }
+}
+
+.custom-btn{
+    padding: 0px 5px;
+    background-color: #ccc;
+    border-color: #ccc;
+    box-shadow: unset;
+    &:hover{
+        background-color: rgb(131, 131, 131) !important;
+        border-color: rgb(131, 131, 131) !important;
+        box-shadow: unset !important;
+    }
+}
+.custom-input{
+    border: none !important;
+    background-color: #fff;
+}
+.table-list:hover .custom-input{
+    background: #f9aa33;
+    color: white;
+}
+
+.edit-input{
+  background-color: #fff !important;
+  color: black !important ;
+  border: 1px solid blue !important;
+}
+
+.table-select{
+  background-color: #f9aa33;
+}
+
+.custom-class .tooltip-inner {
+  background-color: darkgreen !important;
+  font-size: 125%;
+}
+.custom-class .arrow::before {
+  border-top-color: darkgreen !important;
+}
+.pagination{
+  margin-bottom: 0px !important;
+}

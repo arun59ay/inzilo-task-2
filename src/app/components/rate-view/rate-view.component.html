@@ -1,0 +1,234 @@
+<div class="w-100 h-100">
+    <div class="d-flex align-items-center rate-card-header">
+        <img src="../../../assets/images/information-button.png" width="15" height="15" />
+        <div class="ft-14 fw-500 ml-2 text-capitalize">rate review</div>
+    </div>
+    <form [formGroup]="rateview">
+    <div class="rate-card-body">
+        <div class="mb-2">
+            <label>
+                <span class="ft-12 fw-500 text-capitalize mr-1">description</span>
+                <img src="../../../assets/images/help-web-button.png" width="10" height="10" />
+            </label>
+            <input type="text" formControlName="first" class="form-control" [ngClass]="{ 'is-invalid': f.first.touched && f.first.errors }"  />
+            <div *ngIf="f.first.touched && f.first.errors" class="invalid-feedback">
+                <div *ngIf="f.first.errors.required">Field is required</div>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label>
+                <span class="ft-12 fw-500 text-capitalize mr-1">SIC Code</span>
+                <img src="../../../assets/images/help-web-button.png" width="10" height="10" />
+            </label>
+            <!-- <input type="text" formControlName="third" class="form-control" [ngClass]="{ 'is-invalid': f.third.touched && f.third.errors }"  />
+            <div *ngIf="f.third.touched && f.third.errors" class="invalid-feedback">
+                <div *ngIf="f.third.errors.required">Field is required</div>
+            </div> -->
+            <select name="" id="" formControlName="second" class="form-control" [ngClass]="{ 'is-invalid': f.second.touched && f.second.errors }"  >
+                <option value=""></option>
+                <option value="">5826 Restaurant</option>
+                <option value="">4893 Restaurant</option>
+            </select>
+            <div *ngIf="f.second.touched && f.second.errors" class="invalid-feedback">
+                <div *ngIf="f.second.errors.required">Field is required</div>
+            </div>
+        </div>
+        <div class="pb-2">
+            <div class="d-flex justify-content-between mb-2">
+                <div class="input-group col-6 p-0">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/visa.png" class="mr-1" width="18" height="18" alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text" formControlName="third" class="form-control" [ngClass]="{ 'is-invalid': f.third.touched && f.third.errors }"  />
+                    <div *ngIf="f.third.touched && f.third.errors" class="invalid-feedback">
+                        <div *ngIf="f.third.errors.required">Field is required</div>
+                    </div>
+                </div>
+                <div class="input-group col-5 p-0 ml-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/visa.png" class="mr-1" width="18" height="18" alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text" formControlName="fourth" class="form-control" [ngClass]="{ 'is-invalid': f.fourth.touched && f.fourth.errors }"  />
+                    <div *ngIf="f.fourth.touched && f.fourth.errors" class="invalid-feedback">
+                        <div *ngIf="f.fourth.errors.required">Field is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+                <div class="input-group col-6 p-0">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/mastercard.png" class="mr-1" width="18" height="18" alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text" formControlName="fifth" class="form-control" [ngClass]="{ 'is-invalid': f.fifth.touched && f.fifth.errors }"  />
+                    <div *ngIf="f.fifth.touched && f.fifth.errors" class="invalid-feedback">
+                        <div *ngIf="f.fifth.errors.required">Field is required</div>
+                    </div>
+                </div>
+                <div class="input-group col-5 p-0 ml-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/mastercard.png" class="mr-1" width="18" height="18" alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text" formControlName="sixth" class="form-control" [ngClass]="{ 'is-invalid': f.sixth.touched && f.sixth.errors }"  />
+                    <div *ngIf="f.sixth.touched && f.sixth.errors" class="invalid-feedback">
+                        <div *ngIf="f.sixth.errors.required">Field is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+                <div class="input-group col-6 p-0">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/credit-card.png" class="mr-1" width="18" height="18"
+                                alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text"formControlName="seventh" class="form-control" [ngClass]="{ 'is-invalid': f.seventh.touched && f.seventh.errors }"  />
+                    <div *ngIf="f.seventh.touched && f.seventh.errors" class="invalid-feedback">
+                        <div *ngIf="f.seventh.errors.required">Field is required</div>
+                    </div>
+                </div>
+                <div class="input-group col-5 p-0 ml-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/credit-card.png" class="mr-1" width="18" height="18"
+                                alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text" formControlName="eighth" class="form-control" [ngClass]="{ 'is-invalid': f.eighth.touched && f.eighth.errors }"  />
+                    <div *ngIf="f.eighth.touched && f.eighth.errors" class="invalid-feedback">
+                        <div *ngIf="f.eighth.errors.required">Field is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+                <div class="input-group col-6 p-0">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/american-express.png" class="mr-1" width="18" height="18"
+                                alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text" formControlName="ninth" class="form-control" [ngClass]="{ 'is-invalid': f.ninth.touched && f.ninth.errors }"  />
+                    <div *ngIf="f.ninth.touched && f.ninth.errors" class="invalid-feedback">
+                        <div *ngIf="f.ninth.errors.required">Field is required</div>
+                    </div>
+                </div>
+                <div class="input-group col-5 p-0 ml-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ft-12" id="inputGroup-sizing-sm">
+                            <img src="../../../assets/images/american-express.png" class="mr-1" width="18" height="18"
+                                alt="">
+                            <span class="ft-12 font-weight-bold">$</span>
+                        </div>
+                    </div>
+                    <input type="text" formControlName="tenth" class="form-control" [ngClass]="{ 'is-invalid': f.tenth.touched && f.tenth.errors }"  />
+                    <div *ngIf="f.tenth.touched && f.tenth.errors" class="invalid-feedback">
+                        <div *ngIf="f.tenth.errors.required">Field is required</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <div class="col-7 pl-0 pr-5">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">Total volume</label>
+                <input type="text" formControlName="eleven" class="form-control" [ngClass]="{ 'is-invalid': f.eleven.touched && f.eleven.errors }"  />
+                <div *ngIf="f.eleven.touched && f.eleven.errors" class="invalid-feedback">
+                    <div *ngIf="f.eleven.errors.required">Field is required</div>
+                </div>
+            </div>
+            <div class="col-5 px-0">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">Total transition</label>
+                <input type="text" formControlName="twelve" class="form-control" [ngClass]="{ 'is-invalid': f.twelve.touched && f.twelve.errors }"  />
+            <div *ngIf="f.twelve.touched && f.twelve.errors" class="invalid-feedback">
+                <div *ngIf="f.twelve.errors.required">Field is required</div>
+            </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <div class="col-7 pl-0 pr-5">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">avg ticket</label>
+                <input type="text" formControlName="thirteen" class="form-control" [ngClass]="{ 'is-invalid': f.thirteen.touched && f.thirteen.errors }"  />
+            <div *ngIf="f.thirteen.touched && f.thirteen.errors" class="invalid-feedback">
+                <div *ngIf="f.thirteen.errors.required">Field is required</div>
+            </div>
+            </div>
+            <div class="col-5 px-0">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">current rate</label>
+                <input type="text" formControlName="fifteen" class="form-control" [ngClass]="{ 'is-invalid': f.fifteen.touched && f.fifteen.errors }"  />
+            <div *ngIf="f.fifteen.touched && f.fifteen.errors" class="invalid-feedback">
+                <div *ngIf="f.fifteen.errors.required">Field is required</div>
+            </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <div class="col-7 pl-0 pr-5">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">current fees</label>
+                <input type="text" formControlName="sixteen" class="form-control" [ngClass]="{ 'is-invalid': f.sixteen.touched && f.sixteen.errors }"  />
+            <div *ngIf="f.sixteen.touched && f.sixteen.errors" class="invalid-feedback">
+                <div *ngIf="f.sixteen.errors.required">Field is required</div>
+            </div>
+            </div>
+            <div class="col-5 px-0">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">current amex rate</label>
+                <input type="text" formControlName="seventeen" class="form-control" [ngClass]="{ 'is-invalid': f.seventeen.touched && f.seventeen.errors }"  />
+            <div *ngIf="f.seventeen.touched && f.seventeen.errors" class="invalid-feedback">
+                <div *ngIf="f.seventeen.errors.required">Field is required</div>
+            </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <div class="col-7 pl-0 pr-5">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">marchant type</label>
+                <input type="text" formControlName="eighteen" class="form-control" [ngClass]="{ 'is-invalid': f.eighteen.touched && f.eighteen.errors }"  />
+            <div *ngIf="f.eighteen.touched && f.eighteen.errors" class="invalid-feedback">
+                <div *ngIf="f.eighteen.errors.required">Field is required</div>
+            </div>
+            </div>
+            <div class="col-5 px-0">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">high speed</label>
+                <input type="text" formControlName="ninteen" class="form-control" [ngClass]="{ 'is-invalid': f.ninteen.touched && f.ninteen.errors }"  />
+            <div *ngIf="f.ninteen.touched && f.ninteen.errors" class="invalid-feedback">
+                <div *ngIf="f.ninteen.errors.required">Field is required</div>
+            </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between pb-4">
+            <div class="col-7 pl-0 pr-5">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">marchant type</label>
+                <input type="text" formControlName="twenty" class="form-control" [ngClass]="{ 'is-invalid': f.twenty.touched && f.twenty.errors }"  />
+            <div *ngIf="f.twenty.touched && f.twenty.errors" class="invalid-feedback">
+                <div *ngIf="f.twenty.errors.required">Field is required</div>
+            </div>
+            </div>
+            <div class="col-5 px-0">
+                <label  class="ft-12 fw-500 text-capitalize mr-1">high speed</label>
+                <input type="text" formControlName="twentyone" class="form-control" [ngClass]="{ 'is-invalid': f.twentyone.touched && f.twentyone.errors }"  />
+            <div *ngIf="f.twentyone.touched && f.twentyone.errors" class="invalid-feedback">
+                <div *ngIf="f.twentyone.errors.required">Field is required</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" >
+        Send
+      </button>
+</form>
+</div>
+<!-- 
+<span>description</span>
+<img src="../../../assets/images/help-web-button.png" width="10" height="10"/> -->

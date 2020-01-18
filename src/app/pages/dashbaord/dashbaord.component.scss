@@ -1,0 +1,31 @@
+
+// container grid
+
+.container-grid{
+    display: grid;
+    // column-gap: 20px;
+    // padding: 10px 50px 0px 50px;
+}
+
+.container-subs-grid{
+  display: grid;
+  column-gap: 20px;
+  padding: 10px 10px;
+  height: calc(100% - 55px);
+}
+
+// grid css
+
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 2fr 8fr);
+  }
+  
+  // background
+  
+.background-color-light{
+  background-color: #e5e5e5;
+}
